@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>@mrgamer_0777 - Gaming Channel</title>
+  <meta name="description" content="Official landing page for @mrgamer_0777 — latest videos, about, and contact.">
+  <style>
+    :root{--accent:#ff4757;--bg:#0f1724;--card:#0b1220;--muted:#94a3b8}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071026 0%,#0d1724 100%);color:#e6eef8}
+    .wrap{max-width:960px;margin:32px auto;padding:16px}
+    header{display:flex;gap:16px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:12px;flex:0 0 96px;background:#1b2430;display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:6px 0;color:var(--muted)}
+    nav{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:24px}
+    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    .video-list{display:grid;grid-template-columns:1fr;gap:12px}
+    .video{display:flex;gap:12px;align-items:flex-start}
+    .video iframe{width:100%;height:200px;border-radius:8px;border:0}
+    aside .subscribe{display:flex;flex-direction:column;gap:10px}
+    .socials{display:flex;gap:8px}
+    .socials a{background:rgba(255,255,255,0.04);padding:8px;border-radius:8px;color:var(--muted);text-decoration:none}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:900px){ .grid{grid-template-columns:1fr;} aside{order:2} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar" id="avatar">IMG</div>
+      <div>
+        <h1>@mrgamer_0777</h1>
+        <p class="lead">Mobile gaming, tips, aur epic gameplay — roz naya video. Subscribe karna na bhoolna!</p>
+        <nav>
+          <a class="btn" href="#videos">Latest Videos</a>
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section id="videos" class="card">
+          <h2>Latest Videos</h2>
+          <p style="color:var(--muted);margin-top:6px">Click play to watch directly on this page.</p>
+          <div class="video-list" id="videoList">
+            <div class="video card">
+              <div style="flex:1">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Video 1" allowfullscreen></iframe>
+                <h3 style="margin:8px 0 0 0">Video Title 1</h3>
+                <p style="color:var(--muted);margin:6px 0">Short description of video 1.</p>
+              </div>
+            </div>
+
+            <div class="video card">
+              <div style="flex:1">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video 2" allowfullscreen></iframe>
+                <h3 style="margin:8px 0 0 0">Video Title 2</h3>
+                <p style="color:var(--muted);margin:6px 0">Short description of video 2.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="card" style="margin-top:14px">
+          <h2>About</h2>
+          <p style="color:var(--muted)">Main @mrgamer_0777 hoon — mobile gamer. Is channel par gameplay highlights, tips, and funny moments milenge. Naye friends banane ke liye subscribe karo!</p>
+        </section>
+
+        <section id="contact" class="card" style="margin-top:14px">
+          <h2>Contact</h2>
+          <p style="color:var(--muted)">Business/Collab: <a href="mailto:your-email@example.com" style="color:var(--accent)">your-email@example.com</a></p>
+          <p style="color:var(--muted)">Discord / Other: <span style="color:var(--accent)">YourDiscord#1234</span></p>
+        </section>
+      </main>
+
+      <aside class="card">
+        <div class="subscribe">
+          <h3>Subscribe</h3>
+          <p style="color:var(--muted)">Subscribe to the channel for daily uploads.</p>
+          <a class="btn" href="https://www.youtube.com/channel/CHANNEL_ID" target="_blank">Open Channel</a>
+
+          <div style="margin-top:12px">
+            <h4>Social</h4>
+            <div class="socials">
+              <a href="#">Instagram</a>
+              <a href="#">Discord</a>
+              <a href="#">Twitter</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <h4>About the Channel</h4>
+          <p style="color:var(--muted)">Short line about content schedule, best videos, or achievements.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer> © <span id="year"></span> @mrgamer_0777 — Built with ❤️ (Free on GitHub Pages)</footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      var url = 'PROFILE_IMAGE_URL';
+      if(url && url.indexOf('PROFILE_IMAGE_URL')===-1){
+        var a = document.getElementById('avatar');
+        a.innerHTML = '';
+        var img = document.createElement('img');
+        img.src = url; img.style.width='100%'; img.style.height='100%'; img.style.objectFit='cover'; img.style.borderRadius='10px';
+        a.appendChild(img);
+      }
+    })();
+  </script>
+</body>
+</html>
